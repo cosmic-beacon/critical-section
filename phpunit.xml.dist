@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<phpunit colors="true" bootstrap="tests/bootstrap.php">
+<phpunit
+    backupGlobals="false"
+    backupStaticAttributes="false"
+    colors="true"
+    convertErrorsToExceptions="true"
+    convertNoticesToExceptions="true"
+    convertWarningsToExceptions="true"
+    processIsolation="false"
+    stopOnFailure="false"
+    syntaxCheck="false"
+    bootstrap="tests/bootstrap.php"
+    verbose="true"
+>
     <testsuites>
-        <testsuite name="Critical Section Test Suite">
+        <testsuite name="Test suite">
             <directory suffix="Test.php">./tests/</directory>
         </testsuite>
     </testsuites>

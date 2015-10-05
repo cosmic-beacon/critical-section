@@ -1,9 +1,9 @@
 <?php
-namespace tests\Publero\CriticalSection;
+namespace CB\Tests\CriticalSection;
 
-use Publero\CriticalSection\FileCriticalSection;
+use CosmicBeacon\CriticalSection\FileCriticalSection;
 
-class FilecriticalSectionTest extends \PHPUnit_Framework_TestCase
+class FileCriticalSectionTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @var FileCriticalSection

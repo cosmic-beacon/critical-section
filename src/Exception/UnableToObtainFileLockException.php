@@ -1,5 +1,5 @@
 <?php
-namespace Publero\CriticalSection\Exception;
+namespace CosmicBeacon\CriticalSection\Exception;
 
 class UnableToObtainFileLockException extends UnableToObtainLockException
 {
@@ -8,7 +8,7 @@ class UnableToObtainFileLockException extends UnableToObtainLockException
      */
     private $lockFile;
 
-    public function __construct($lockCode, $lockFile, $exceptionCode = 0, Exception $previous = null)
+    public function __construct($lockCode, $lockFile, $exceptionCode = 0, \Exception $previous = null)
     {
         $this->lockFile = $lockFile;
         $message = "Unable to obtain lock \"$lockCode\", file \"$lockFile\" couldn't be locked";

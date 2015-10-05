@@ -1,13 +1,15 @@
 <?php
-namespace Publero\CriticalSection;
+namespace CosmicBeacon\CriticalSection;
 
 interface CriticalSection
 {
     /**
-     * @param string $code
+     * @param string   $code
      * @param int|null $timeoutSeconds
+     *
+     * @throws \CosmicBeacon\CriticalSection\Exception\UnableToObtainLockException
+     *
      * @return bool
-     * @throws \Publero\CriticalSection\Exception\UnableToObtainLockException
      */
     public function enter($code, $timeoutSeconds = null);
 
@@ -18,7 +20,8 @@ interface CriticalSection
 
     /**
      * @param string $code
-     * @return boolean
+     *
+     * @return bool
      */
     public function canEnter($code);
 }
