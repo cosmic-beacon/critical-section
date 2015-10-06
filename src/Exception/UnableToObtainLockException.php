@@ -1,5 +1,5 @@
 <?php
-namespace Publero\CriticalSection\Exception;
+namespace CosmicBeacon\CriticalSection\Exception;
 
 class UnableToObtainLockException extends \RuntimeException
 {
@@ -8,7 +8,7 @@ class UnableToObtainLockException extends \RuntimeException
      */
     private $lockCode;
 
-    public function __construct($lockCode, $message = "", $code = 0, Exception $previous = null)
+    public function __construct($lockCode, $message = '', $code = 0, \Exception $previous = null)
     {
         $this->lockCode = $lockCode;
 

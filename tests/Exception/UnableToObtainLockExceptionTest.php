@@ -1,7 +1,7 @@
 <?php
-namespace tests\Publero\CriticalSection\Exception;
+namespace CosmicBeacon\CriticalSection\Tests\Exception;
 
-use Publero\CriticalSection\Exception\UnableToObtainLockException;
+use CosmicBeacon\CriticalSection\Exception\UnableToObtainLockException;
 
 class UnableToObtainLockExceptionTest extends \PHPUnit_Framework_TestCase
 {

@@ -1,7 +1,7 @@
 <?php
-namespace Publero\CriticalSection;
+namespace CosmicBeacon\CriticalSection;
 
-use Publero\CriticalSection\Exception\UnableToObtainFileLockException;
+use CosmicBeacon\CriticalSection\Exception\UnableToObtainFileLockException;
 
 class FileCriticalSection implements CriticalSection
 {
@@ -27,10 +27,12 @@ class FileCriticalSection implements CriticalSection
     }
 
     /**
-     * @param string $code
+     * @param string   $code
      * @param int|null $timeoutSeconds
-     * @return bool
+     *
      * @throws UnableToObtainFileLockException
+     *
+     * @return bool
      */
     public function enter($code, $timeoutSeconds = null)
     {
@@ -73,7 +75,8 @@ class FileCriticalSection implements CriticalSection
 
     /**
      * @param string $code
-     * @return boolean
+     *
+     * @return bool
      */
     public function canEnter($code)
     {
@@ -86,6 +89,7 @@ class FileCriticalSection implements CriticalSection
 
     /**
      * @param string $code
+     *
      * @return \SplFileObject
      */
     private function getFile($code)
@@ -95,6 +99,7 @@ class FileCriticalSection implements CriticalSection
 
     /**
      * @param string $code
+     *
      * @return string
      */
     private function getLockFileName($code)

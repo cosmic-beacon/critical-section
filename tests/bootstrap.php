@@ -1,15 +1,16 @@
 <?php
+require(__DIR__ . '/../vendor/autoload.php');
 
-function includeIfExists($file)
+function initPostgreSQL()
 {
-    if (file_exists($file)) {
-        return include $file;
+    try {
+        $pdo = new \PDO('pgsql:host=localhost;port=5432;user=postgres');
+        $pdo->exec('DROP DATABASE IF EXISTS cb_critical_section_test;');
+        $pdo->exec('CREATE DATABASE cb_critical_section_test;');
+    } catch (\PDOException $e) {
+        echo $e->getMessage();
     }
+
 }
 
-if ((!$loader = includeIfExists(__DIR__.'/../vendor/autoload.php')) && (!$loader = includeIfExists(__DIR__.'/../../../autoload.php'))) {
-    die('You must set up the project dependencies, run the following commands:'.PHP_EOL.
-        'curl -s http://getcomposer.org/installer | php'.PHP_EOL.
-        'php composer.phar install'.PHP_EOL);
-}
-$loader->add('Publero\CriticalSection\Tests\\', __DIR__);
+initPostgreSQL();

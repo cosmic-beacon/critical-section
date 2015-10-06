@@ -1,2 +1,5 @@
 .idea
+composer.lock
+php-cs-fixer
 vendor
+composer.phar

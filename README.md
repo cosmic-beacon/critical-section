@@ -1,7 +1,7 @@
 CriticalSection PHP library
 ===========================
 
-[![Build Status](https://travis-ci.org/Publero/critical-section.png?branch=master)](https://travis-ci.org/Publero/critical-section)
+[![Build Status](https://travis-ci.org/cosmic-beacon/critical-section.png?branch=master)](https://travis-ci.org/cosmic-beacon/critical-sectionn)
 
 This library handles problem of code critical section which should be executed only once at a time.
 
@@ -49,7 +49,7 @@ Keep in mind that you have to check if enter returned true if you use timeout.
 Check if code can enter critical section
 ----------------------------------------
 
-If you are using everyminute cron (or even faster), we can assume that you can skip one or two calls here and there.
+If you are using every minute cron (or even faster), we can assume that you can skip one or two calls here and there.
 To do so you can check if critical section can be entered before entering it.
 
 ``` php
@@ -75,14 +75,7 @@ if ($criticalSection->enter($code, 0)) {
 }
 ```
 
-License
--------
-
-This bundle is under the MIT license. See the complete license in the bundle:
-
-    LICENSE
-
 Reporting an issue or a feature request
 ---------------------------------------
 
-Issues and feature requests are tracked in the [Github issue tracker](https://github.com/Publero/critical-section).
+Issues and feature requests are tracked in the [Github issue tracker](https://github.com/cosmic-beacon/critical-section/issues).
